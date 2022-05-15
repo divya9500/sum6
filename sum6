@@ -1,0 +1,45 @@
+#Write a program to replace an char with an given char in an string
+
+package Assessment3;
+
+import java.util.Objects;
+import java.util.Scanner;
+
+public class ReplaceChar {
+   static String str="";
+    String Char(String s1,char a,char a1){
+        for(int i=0;i<s1.length();i++){
+            char c=s1.charAt(i);
+            if(c==a) {
+                c=a1;
+            }
+            str=str+c;
+        }
+       return str;
+    }
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        ReplaceChar o=new ReplaceChar();
+
+        System.out.println("enter the string:");
+        String s1=s.nextLine();
+
+        System.out.println("enter the character1:");
+        String s2=s.next();
+        char a=s2.charAt(0);
+
+        System.out.println("enter the character2:");
+        String s3=s.next();
+        char a1=s3.charAt(0);
+
+        System.out.println(a+" is replacing by "+a1);
+
+        //user defined
+        o.Char(s1,a,a1);
+        System.out.println(str);
+
+        //build in function
+        System.out.println(s1.replace(a,a1));
+
+    }
+}
